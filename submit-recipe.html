@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share a recipe</title>
+    <link rel="icon" href="/images/recipe-share-favicon.ico" type="image/x-icon">
+    <style>
+        form    {
+            width: 300px; /* Controls form width */
+            margin: 0 auto; /* Centers the form */
+        }
+
+        /* Align labels and inputs properly */
+        label   {
+            display: block; /* Puts label on its own line */
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input:focus, textarea {
+            width: 100%; /* Ensures all inputs take full width */
+            padding: 8px; /* Adds space inside boxes */
+            margin-bottom: 15px; /* Creates space between fields */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 5px; /* Rounded corners */
+            border-color: #2575fc;
+            box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+            outline: none;
+        }
+
+        textarea    {
+            height: 100px; /* Makes textarea bigger */
+            resize: vertical; /* Allows resizing up/down */
+        }
+
+        fieldset    {
+            border: 2px solid #ddd; /* Light gray border */
+            padding: 15px;
+            border-radius: 10px;
+            background-color: bisque;
+        }
+
+        legend  {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        button  {
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient blue-purple */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover    {
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Reverse gradient */
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+            filter: brightness(1.1); /* Slight brightness boost */
+        }
+
+        button:active   {
+            transform: translateY(1px);
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+
+<body id="top">
+    <a href="/index.html">
+        <img src="/images/home.png" alt="Home" width="24" height="24">
+    </a>
+
+    <h1>Share your recipe with us!</h1>
+    <p><i>Fill out the form below to submit your favorite recipe!</i></p>
+
+<form action="http://httpbin.org/get" method="get">
+    <fieldset>
+        <legend>Recipe Details</legend>
+            <div>
+                <label for="recipeName">Recipe for:</label>
+                <input type="text" name="recipeName" id="recipeName" placeholder="E.g., spicy chicken curry" autocomplete="on" required autofocus>
+            </div>
+<br>
+        <div>
+            <label for="describeRecipe">Briefly describe your recipe:</label>
+            <textarea name="describeRecipe" id="describeRecipe" placeholder="E.g., A rich and creamy chicken curry with bold spices, perfect with rice or naan" autocomplete="on" required></textarea>
+        </div>
+    <br>
+        <div>
+            <label for="ingredients">List all ingredients:</label>
+            <textarea name="ingredients" id="ingredients" placeholder="E.g., two cups flour, 1 tsp salt, etc." autocomplete="on" required></textarea>
+        </div>
+    <br>
+        <div>
+            <label for="instructions">Step-by-Step Instructions:</label>
+            <textarea name="instructions" id="instructions" placeholder="E.g., mix flour and salt in a bowl, etc." autocomplete="on" required></textarea>
+        </div>
+    <br>
+        <div>
+            <label for="recipeCreator">Your Name (optional):</label>
+            <input type="text" name="recipeCreator" id="recipeCreator" placeholder="Care to share your name?">
+        </div>
+    <br>
+        <div>
+            <label for="uploadImage">Upload an Image (optional):</label>
+            <input type="file" name="uploadImage" id="uploadImage" accept="image/*">
+        </div>
+    <br>
+        <button type="submit">Submit Recipe</button>
+    </fieldset>
+</form>
+<hr>
+<footer>
+    <p>&copy;2025 My Recipe Website. All rights reserved.</p>
+    <p>Follow us on <a href="javascript:void(0)">Instagram</a>   |   <a href="javascript:void(0)">Facebook</a></p>
+    <br>
+    <p><a href="#top">Back to top</a></p>
+    <p>Thank you for sharing your delicioius recipe with us.</p>
+</footer>
+
+</body>
+</html>
